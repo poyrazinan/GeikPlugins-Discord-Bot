@@ -1,6 +1,6 @@
 # GeikPlugins-Discord-Socket
 
-Discord bot socket for LeaderOS. Websender integration and License Managment
+Web Socket and License Management for Discord Bot.
 
 - PHP to Java socket listening
 - MYSQL License check (On Join)
