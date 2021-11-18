@@ -13,19 +13,19 @@ import xyz.geik.plugins.utils.socket.UtilSocket;
 public class Main {
 
     // SQL Settings
-    public static final String HOST_ADRESS = "HOST ADRESS";
+    public static final String HOST_ADRESS = "MYSQL IP";
     public static final String HOST_PORT = "3306";
-    public static final String DATABASE_NAME = "DATABASE_NAME";
-    public static final String USER_NAME = "USERNAME";
-    public static final String PASSWORD = "PASSWORD";
+    public static final String DATABASE_NAME = "MYSQL DBNAME";
+    public static final String USER_NAME = "MYSQL USERNAME";
+    public static final String PASSWORD = "MYSQL PASSWORD";
 
     // BOT Settings
-    public static final String BOT_TOKEN = "BOT TOKEN HERE";
-    public static final String BOT_STATUS = "BOT STATUS HERE";
-    public static final String TITLE_LINK = "TITLE WEBSITE LINK";
+    public static final String BOT_TOKEN = "DISCORD BOT TOKEN";
+    public static final String BOT_STATUS = "BOT STATUS";
+    public static final String TITLE_LINK = "WEBSITE LINK";
     public static final String PHOTO_LINK = "PHOTO LINK";
     public static final String CUSTOMER_ROLE_ID = "CUSTOMER ROLE ID";
-    public static final String FOOTER_NAME = "EMBED FOOTER NAME";
+    public static final String FOOTER_NAME = "EMBED FOOTER TEXT";
 
     // Found License Embed
     public static final String JOIN_TITLE = "Merhaba!";
@@ -33,7 +33,7 @@ public class Main {
     public static final String JOIN_FIRST_FIELD = "Sana ait lisans bulundu:";
     public static final String JOIN_FIRST_FIELD_DESC = "%licenses%";
     public static final String JOIN_SECOND_FIELD = "Hatırlatma:";
-    public static final String JOIN_SECOND_FIELD_DESC = "İndirmeler sitemizden yapılmaktadır. %link";
+    public static final String JOIN_SECOND_FIELD_DESC = "İndirmeler sitemizden yapılmaktadır. %link%";
 
     // Bought License Embed
     public static final String BUY_TITLE = "Merhaba!";
@@ -44,7 +44,7 @@ public class Main {
     public static final String BUY_SECOND_FIELD_DESC = "İndirmeler sitemizden yapılmaktadır. %link%";
 
     public static int socketPort = 10280;
-    public static String socketPassword = "123asd123asd123asd";
+    public static String socketPassword = "SOCKET PASSWORD";
     public static String socketPrefix = "[Lisans Kaydı] ";
     public static String socketWrongPassword = "Incorrect password, please enter it carefully.";
     public static String socketWrongData = "Please check PHP variables.";

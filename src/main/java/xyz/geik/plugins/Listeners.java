@@ -44,7 +44,7 @@ public class Listeners extends ListenerAdapter {
         HashMap<String, DiscordStats> discordStats = DatabaseQueries.getAllDiscordStats();
         List<MemberStats> memberStatList = DatabaseQueries.getAllPlayerLicenses(user.getId());
         PrivateChannel directMessage = e.getMember().getUser().openPrivateChannel().complete();
-        if (memberStatList != null)
+        if (memberStatList != null && !memberStatList.isEmpty())
         {
             directMessage.sendMessageEmbeds(foundLicensesEmbed(memberStatList).build()).queue();
             Role customerRole = jda.getRoleById(Main.CUSTOMER_ROLE_ID);
@@ -58,7 +58,7 @@ public class Listeners extends ListenerAdapter {
 
     private String licenseStringBuilder(final List<MemberStats> memberStatList) {
         String licenseString = memberStatList.stream()
-                .map(memberStats -> (memberStats.getPluginName())).collect(Collectors.toList()).toString();
+                .map(memberStats -> (memberStats.getPlugin())).collect(Collectors.toList()).toString();
         return licenseString;
     }
 

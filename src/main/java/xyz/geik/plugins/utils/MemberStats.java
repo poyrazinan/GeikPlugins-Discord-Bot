@@ -8,17 +8,19 @@ public class MemberStats {
 
     private String pluginName;
 
+    private String plugin;
     /**
      * @author Geik
      * @since 1.0.0
      * @param discordId
      * @param pluginId
      */
-    public MemberStats(String discordId, String pluginId, String pluginName)
+    public MemberStats(String discordId, String pluginId, String pluginName, String plugin)
     {
         this.discordId = discordId;
         this.pluginId = pluginId;
         this.pluginName = pluginName;
+        this.plugin = plugin;
     }
 
     public String getDiscordID()
@@ -30,5 +32,6 @@ public class MemberStats {
         return this.pluginId;
     }
     public String getPluginName() { return this.pluginName; }
+    public String getPlugin() { return this.plugin; }
 
 }

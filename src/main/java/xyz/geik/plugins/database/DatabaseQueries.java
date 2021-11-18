@@ -32,7 +32,7 @@ public class DatabaseQueries {
     }
 
     public static List<MemberStats> getAllPlayerLicenses(String discord_id) {
-        String SQL_QUERY = "SELECT LC.productID, P.name FROM Licenses AS LC INNER JOIN Products AS P ON P.id = LC.productID WHERE discord_id = ?";
+        String SQL_QUERY = "SELECT LC.productID, P.dataName, P.name FROM Licenses AS LC INNER JOIN Products AS P ON P.id = LC.productID WHERE discord_id = ?";
         List<MemberStats> valueTotal = new ArrayList<MemberStats>();
         try (Connection con = ConnectionPool.getConnection())
         {
@@ -40,7 +40,7 @@ public class DatabaseQueries {
             pst.setString(1, discord_id);
             ResultSet resultSet = pst.executeQuery();
             while (resultSet.next()) {
-                valueTotal.add(new MemberStats(discord_id, resultSet.getString("productID"), resultSet.getString("name")));
+                valueTotal.add(new MemberStats(discord_id, resultSet.getString("productID"), resultSet.getString("dataName"), resultSet.getString("name")));
             }
             resultSet.close();
             pst.close();
